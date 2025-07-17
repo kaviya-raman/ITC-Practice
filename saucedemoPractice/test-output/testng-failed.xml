@@ -3,14 +3,65 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.LoginPageTest">
+      <class name="test.CartPageTest">
         <methods>
-          <include name="testInvalidLogin" invocation-numbers="2 3 4"/>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="testValidLoginAndPurchaseFlow"/>
+          <include name="testCartPageAfterAddingProducts"/>
+          <include name="testCheckoutButtonStyles"/>
+        </methods>
+      </class> <!-- test.CartPageTest -->
+      <class name="test.OverviewPageTest">
+        <methods>
+          <include name="testFinishButtonFunctionality"/>
+          <include name="testFinishButtonStyles"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="testOverviewAccessWithoutFormSubmission"/>
+        </methods>
+      </class> <!-- test.OverviewPageTest -->
+      <class name="test.LogoutPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testLogoutFunctionality"/>
+          <include name="setup"/>
+          <include name="testLogoutButtonStyles"/>
+        </methods>
+      </class> <!-- test.LogoutPageTest -->
+      <class name="test.checkoutPageTest">
+        <methods>
+          <include name="testValidCheckoutFormSubmission"/>
+          <include name="testMissingLastName"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="testMissingFirstName"/>
+          <include name="testContinueButtonStyles"/>
+        </methods>
+      </class> <!-- test.checkoutPageTest -->
+      <class name="test.ConfirmationPageTest">
+        <methods>
+          <include name="testConfirmationPageAccessWithoutOrder"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="testBackHomeButtonStyles"/>
+          <include name="testBackHomeButtonFunctionality"/>
+        </methods>
+      </class> <!-- test.ConfirmationPageTest -->
+      <class name="test.LoginPageTest">
+        <methods>
+          <include name="testInvalidUserLogin" invocation-numbers="2 3"/>
+          <include name="testValidUserLoginFlow" invocation-numbers="0 2 3"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- test.LoginPageTest -->
+      <class name="test.InventoryPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="testInventoryAccessForValidUsers" invocation-numbers="0 2 3 4 5"/>
+        </methods>
+      </class> <!-- test.InventoryPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

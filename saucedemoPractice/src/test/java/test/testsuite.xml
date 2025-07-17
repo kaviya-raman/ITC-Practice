@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="SauceDemo EndToEnd Suite">
+  <test name="Login Tests">
+    <classes>
+      <class name="test.LoginPageTest"/>
+    </classes>
+  </test>
+  <test name="Inventory Tests">
+    <classes>
+      <class name="test.InventoryPageTest"/>
+    </classes>
+  </test>
+  <test name="Cart Tests">
+    <classes>
+      <class name="test.CartPageTest"/>
+    </classes>
+  </test>
+  <test name="Checkout Form Tests">
+    <classes>
+      <class name="test.CheckoutPageTest"/>
+    </classes>
+  </test>
+  <test name="Overview Tests">
+    <classes>
+      <class name="test.OverviewPageTest"/>
+    </classes>
+  </test>
+  <test name="Confirmation Tests">
+    <classes>
+      <class name="test.ConfirmationPageTest"/>
+    </classes>
+  </test>
+  <test name="Logout Tests">
+    <classes>
+      <class name="test.LogoutPageTest"/>
+    </classes>
+  </test>
+</suite>
